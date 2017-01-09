@@ -1,0 +1,62 @@
+\documentclass[10pt,a4paper,twoside,onecolumn]{book}
+% Mes packages
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{lipsum} % Lorem Ipsum ...
+\usepackage[Lenny]{fncychap} % Jolis en tête de chapitres
+\usepackage{minitoc} % Mini table of contents
+% COnfiguration des headers et footers
+\usepackage{fancyhdr}
+\fancyhead[CE]{} 
+\fancyhead[LE]{}
+\fancyhead[RE]{\rightmark}
+\fancyhead[CO]{} 
+\fancyhead[LO]{\leftmark}
+\fancyhead[RO]{}
+\fancyfoot[CO]{\thepage} 
+\fancyfoot[LO]{}
+\fancyfoot[RO]{}
+\fancyfoot[CE]{\thepage} 
+\fancyfoot[LE]{}
+\fancyfoot[RE]{}
+\pagestyle{fancy}
+% Geometrie de la page
+\usepackage[top=2cm, 
+            bottom=2cm, 
+            outer=1cm, 
+            inner=2.1cm, 
+            headsep=14pt]{geometry}
+% Définitions diverses
+\title{Ma thèse en une après-midi}
+\author{Ludovic}
+
+% Mes environnements
+\newcommand{\epigraph}[2]
+  {
+  
+  \og \textit{#1} \fg
+  
+  \textbf{#2}
+
+  \vspace{1cm}
+
+  \minitoc
+  \newpage
+  }
+
+\begin{document}
+\maketitle
+\dominitoc% Initialization
+\tableofcontents
+
+\frontmatter %Préambule
+\include{Introduction/Introduction}
+\mainmatter % Corps du document
+\include{Chap1/Chap1}
+\backmatter % Annexes
+\end{document}
