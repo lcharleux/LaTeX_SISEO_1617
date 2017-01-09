@@ -1,0 +1,11 @@
+*.blg
+*.out
+*.brf
+*.spl
+*.bbl
+*.aux
+*.synctex.gz
+*.log
+*.pyc
+*~
+

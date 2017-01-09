@@ -1,0 +1,142 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc} % Pour les autres
+%\usepackage[latin1]{inputenc} % Pour Windows
+\usepackage[francais]{babel}
+\usepackage{physics}
+\usepackage{amsmath, amssymb}
+
+\title{Mon premier document \LaTeX}
+\author{Moi}
+\date{\today}
+\begin{document}
+\maketitle
+\tableofcontents
+
+ 
+\section{Introduction}
+Les lapins sont présents un peu partout sur la planète et se répartissent en neuf genres, tous classés dans la famille des léporidés, avec leurs proches parents les lièvres. Ce ne sont donc pas des rongeurs mais des lagomorphes, une branche cousine qui comprend les lièvres, les lapins et les pikas.
+
+Remarque : Les lapins domestiques sont tous issus de l'espèce Oryctolagus cuniculus, le Lapin de garenne, qui est à l'origine de toutes les races de lapin sélectionnées en élevage : voir la Liste des races de lapins.
+
+Les lapins sont répartis dans les genres suivants de la famille des Leporidae : Brachylagus, Bunolagus, Caprolagus, Nesolagus, Oryctolagus (lapin commun), Pentalagus, Poelagus, Pronolagus, Romerolagus et Sylvilagus (ou lapins d'Amérique). C'est-à-dire que les Léporidés sont presque tous des lapins, à l'exclusion du genre Lepus qui rassemble les lièvres. Sept de ces genres ne comprennent qu'une seule espèce de lapin, on dit que ce sont des genres monospécifiques, le genre Nesolagus regroupe deux espèces, le genre Pronolagus en compte trois et le genre Sylvilagus rassemble quinze espèces, soit au moins 27 espèces différentes de lapins en tout.
+
+\subsection{L'état de l'art}
+\subsection{La neige en Haute Savoie}
+\subsubsection{Des détails}
+
+\section{Une première partie}
+Les lapins sont présents un peu partout sur la planète et se répartissent en neuf genres, tous classés dans la famille des léporidés, avec leurs proches parents les lièvres. Ce ne sont donc pas des rongeurs mais des lagomorphes, une branche cousine qui comprend les lièvres, les lapins et les pikas.
+
+Remarque : Les lapins domestiques sont tous issus de l'espèce Oryctolagus cuniculus, le Lapin de garenne, qui est à l'origine de toutes les races de lapin sélectionnées en élevage : voir la Liste des races de lapins.
+
+Les lapins sont répartis dans les genres suivants de la famille des Leporidae : Brachylagus, Bunolagus, Caprolagus, Nesolagus, Oryctolagus (lapin commun), Pentalagus, Poelagus, Pronolagus, Romerolagus et Sylvilagus (ou lapins d'Amérique). C'est-à-dire que les Léporidés sont presque tous des lapins, à l'exclusion du genre Lepus qui rassemble les lièvres. Sept de ces genres ne comprennent qu'une seule espèce de lapin, on dit que ce sont des genres monospécifiques, le genre Nesolagus regroupe deux espèces, le genre Pronolagus en compte trois et le genre Sylvilagus rassemble quinze espèces, soit au moins 27 espèces différentes de lapins en tout.
+\section{Autres manières de structurer}
+\subsection{Les listes}
+\begin{itemize}
+\item Un élément,
+\item Un autre élément,
+\item Et même un troisième.
+\end{itemize}
+
+\subsection{Les énumérations}
+\begin{enumerate}
+\item Rouge,
+\item Vert,
+\item Bleu.
+\end{enumerate}
+
+\section{Les maths !}
+
+\subsection{Des maths simples}
+
+Une équation bien connue:
+
+$$
+E = Mc^2
+$$
+
+Des maths du texte $\alpha = 3$ car c'est bien pratique.
+
+Avec \LaTeX on peut faire des maths avec:
+\begin{itemize}
+\item Du grec $\alpha \gamma \Gamma$,
+\item Des indices et exposants $a_{ij}$, $b_i^j$,
+\item Des vecteurs $\vec u = \vec v \wedge \vec w$,
+\item Des symboles spécifiques aux maths: $\int$, $\sum$, $\forall$, $\in$, $\infty$.
+\item Des fractions:
+$$
+a = b/c
+$$
+
+$$
+a = \sqrt\frac{b}{c + \dfrac{u}{v}}
+$$
+\item Des choses plus tordues:
+
+$$
+w = \overbrace{\sum_{i=0}^\infty a_i}^{\mbox{La grosse équation}}+ 5
+$$ 
+
+\item des matrices !
+
+$$
+A = \begin{pmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9 \\
+\end{pmatrix}
+$$
+\end{itemize}
+
+On peut aussi numéroter ses équations:
+
+\begin{equation}
+a = 5
+\label{eq:a5}
+\end{equation}
+
+Et on peut les citer par la suite, voir équation \ref{eq:a5} (page \pageref{eq:a5}).
+
+
+\begin{eqnarray}
+a & = & 6 \nonumber \\ 
+& = & 3 +  3 \nonumber \\ 
+& = & 1 + 5 
+\end{eqnarray}
+
+\begin{align}
+a & =  6 \\
+& =  3 +  3 \\
+& =  1 + 5 
+\end{align}
+
+\begin{equation}
+f(x) = \left\lbrace\begin{split} 
+0 \mbox{ si: } x \leq 0 \\
+1 \mbox{ sinon}\\
+\end{split} \right.
+\end{equation}
+
+
+$$
+a = \left( \frac{(a+b)c}{c} \right.
+$$
+
+\section{Les tables}
+Il existe deux grands environnements de tables, le plus simple est \textbf{tabular}:
+
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{A} & \textbf{B} & \textbf{C} \\
+\hline
+\hline
+1 & 2 & 3\\
+\hline
+1 & 1.5 & 7 \\
+\hline
+\textit{3} & \textit{1} & \textit{4} \\
+\hline
+\end{tabular}
+
+\end{document}
