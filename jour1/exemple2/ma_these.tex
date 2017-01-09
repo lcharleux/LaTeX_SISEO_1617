@@ -1,11 +1,13 @@
 \documentclass[10pt,a4paper,twoside,onecolumn]{book}
 % Mes packages
 \usepackage[utf8]{inputenc}
+\usepackage{natbib}
 \usepackage[francais]{babel}
+\usepackage[bitstream-charter]{mathdesign}
 \usepackage[T1]{fontenc}
 \usepackage{amsmath}
 \usepackage{amsfonts}
-\usepackage{amssymb}
+%\usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{lipsum} % Lorem Ipsum ...
 \usepackage[Lenny]{fncychap} % Jolis en tête de chapitres
@@ -31,6 +33,8 @@
             outer=1cm, 
             inner=2.1cm, 
             headsep=14pt]{geometry}
+\usepackage{hyperref}
+             
 % Définitions diverses
 \title{Ma thèse en une après-midi}
 \author{Ludovic}
@@ -59,4 +63,9 @@
 \mainmatter % Corps du document
 \include{Chap1/Chap1}
 \backmatter % Annexes
+\listoffigures
+
+\bibliographystyle{unsrtnat}
+\bibliography{bibliography.bib} % chemin d'accés vers le document biblio généré par vous, ou Mendeley ou encore Zotero
+
 \end{document}
