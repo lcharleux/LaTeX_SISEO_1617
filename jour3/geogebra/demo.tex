@@ -1,0 +1,32 @@
+\documentclass[10pt]{article}
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+\begin{document}
+\definecolor{qqwuqq}{rgb}{0,0.39,0}
+\definecolor{qqqqff}{rgb}{0,0,1}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw[->,color=black] (-4.3,0) -- (8.84,0);
+\foreach \x in {-4,-3,-2,-1,1,2,3,4,5,6,7,8}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->,color=black] (0,-6.04) -- (0,6.3);
+\foreach \y in {-6,-5,-4,-3,-2,-1,1,2,3,4,5,6}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-4.3,-6.04) rectangle (8.84,6.3);
+\draw [shift={(1.42,1.4)},color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (0,0) -- (-156:0.6) arc (-156:-51.14:0.6) -- cycle;
+\draw [domain=-4.3:8.84] plot(\x,{(--26.04-2.12*\x)/5.92});
+\draw [domain=-4.3:8.84] plot(\x,{(--8.92-3.5*\x)/2.82});
+\draw [domain=-4.3:8.84] plot(\x,{(-2.38-1.38*\x)/-3.1});
+\begin{scriptsize}
+\fill [color=qqqqff] (-1.4,4.9) circle (1.5pt);
+\draw[color=qqqqff] (-1.24,5.16) node {$A$};
+\fill [color=qqqqff] (4.52,2.78) circle (1.5pt);
+\draw[color=qqqqff] (4.68,3.04) node {$B$};
+\fill [color=qqqqff] (1.42,1.4) circle (1.5pt);
+\draw[color=qqqqff] (1.58,1.66) node {$C$};
+\draw[color=black] (-4.14,-0.74) node {$c$};
+\draw[color=qqwuqq] (1.5,1.1) node {$\alpha$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{document}
